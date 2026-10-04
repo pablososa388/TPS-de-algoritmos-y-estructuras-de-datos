@@ -68,6 +68,10 @@ class List(list):
         #         break
         # if encontrado:
         #     print(element)
+    def filter_contain_on_casa(self, values):
+            for element in self:
+                if any(value in element.house.lower() for value in values):
+                    print(element)
 
     def filter_start_with(self, values):
         for element in self:
